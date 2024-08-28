@@ -4,7 +4,7 @@ Welcome to PECDigitalSolutions!
 
 ## About
 
-This project is focused on providing digital solutions, including WordPress development, app creation, and more.
+This project is focused on providing digital solutions, including webb development, app creation, and more.
 
 ## Features
 

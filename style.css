@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the height covers full viewport */
 }
 
 /* Centering container */
@@ -19,6 +19,7 @@ body {
     border-radius: 10px;
     width: 80%; /* Adjusted width for responsiveness */
     max-width: 500px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Styling for the profile image */
@@ -41,7 +42,8 @@ h1 {
 /* Container for buttons */
 .button-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the buttons in the container */
+    gap: 10px; /* Add some space between the buttons */
     margin-top: 20px;
 }
 
@@ -49,7 +51,6 @@ h1 {
 button {
     font-size: 16px;
     padding: 10px 20px;
-    margin: 0 10px;
     cursor: pointer;
     border: 2px solid #007BFF; /* Border color */
     background-color: #007BFF; /* Button background color */
