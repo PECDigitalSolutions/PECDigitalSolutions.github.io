@@ -7,19 +7,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure the height covers full viewport */
+    height: 100vh;
+    text-align: center; /* Ensure text is centered */
 }
 
-/* Centering container */
-.container {
-    text-align: center;
-    padding: 20px;
+/* Main container to hold both left and right sections */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 800px; /* Max width for larger screens */
     background-color: #ffffff; /* White background for content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
     border-radius: 10px;
-    width: 80%; /* Adjusted width for responsiveness */
-    max-width: 500px; /* Max width for larger screens */
-    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+
+    /* Colored border for visualization */
+    border: 3px solid green; /* Green border for the main container */
+}
+
+/* Left side styling */
+.left-side, .right-side {
+    flex: 1; /* Take equal space */
+    padding: 20px;
+}
+
+/* Left side specific styling */
+.left-side {
+    border-right: 2px solid #ddd; /* Divider between columns */
+
+    /* Colored border for visualization */
+    border: 3px solid blue; /* Blue border for the left side */
+    margin-right: 10px; /* Space between left and right sides */
 }
 
 /* Styling for the profile image */
@@ -41,14 +61,10 @@ h1 {
 
 /* Container for buttons */
 .button-container {
-    display: flex;
-    justify-content: center; /* Center the buttons in the container */
-    gap: 10px; /* Add some space between the buttons */
     margin-top: 20px;
 }
 
-/* Styling for buttons */
-button {
+.button-container button {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
@@ -56,11 +72,29 @@ button {
     background-color: #007BFF; /* Button background color */
     color: white;
     border-radius: 5px;
+    margin: 5px; /* Space between buttons */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover effect for buttons */
-button:hover {
+.button-container button:hover {
     background-color: #0056b3;
     transform: translateY(-2px); /* Slight move up effect */
+}
+
+/* Right side styling */
+.right-side {
+    /* Colored border for visualization */
+    border: 3px solid red; /* Red border for the right side */
+    margin-left: 10px; /* Space between left and right sides */
+}
+
+.right-side h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Center text vertically in the right-side */
 }

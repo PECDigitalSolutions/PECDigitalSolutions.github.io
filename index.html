@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PECDigitalSolution</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <div class="container">
-        <!-- Add an image at the top -->
-        <img src="profile.jpg" alt="Philip Ericsson" class="profile-image">
+    <div class="main-container">
+        <!-- Left side: Name, Image, Buttons -->
+        <div class="left-side">
+            <h1>Philip Ericsson</h1>
+            <img src="profile.jpg" alt="Philip Ericsson" class="profile-image">
+            <div class="button-container">
+                <button onclick="window.location.href='#about'">About Me</button>
+                <button onclick="window.location.href='#resume'">Resume</button>
+                <button onclick="window.location.href='#side-projects'">Side Projects</button>
+            </div>
+        </div>
 
-        <!-- Display the name -->
-        <h1>Philip Ericsson</h1>
-
-        <!-- Buttons below the name -->
-        <div class="button-container">
-            <button onclick="window.location.href='#about'">About Me</button>
-            <button onclick="window.location.href='#resume'">Resume</button>
-            <button onclick="window.location.href='#side-projects'">Side Projects</button>
+        <!-- Right side: Header -->
+        <div class="right-side">
+            <h2>Systemutvecklare</h2>
         </div>
     </div>
 </body>
