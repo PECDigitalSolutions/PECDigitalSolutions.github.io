@@ -47,6 +47,7 @@ body {
     border: 3px solid blue; /* Blue border for the left side */
     margin-right: 10px; /* Space between left and right sides */
     margin-top: 20px; /* Space from the top of the container */
+    text-align: left;
 }
 
 /* Right side styling */
@@ -54,15 +55,15 @@ body {
     border: 3px solid red; /* Red border for the right side */
     margin-left: 10px; /* Space between left and right sides */
     margin-top: 20px; /* Space from the top of the container */
+    text-align: left;
 }
 
-.right-side h2 {
+.right-side h1 {
     font-size: 28px;
-    color: #333;
+    color: #000000;
     font-weight: bold;
+    font-style: Arial;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%; /* Center text vertically in the right-side */
 }
 
@@ -73,21 +74,38 @@ body {
     border-radius: 50%; /* Circular image */
     margin-bottom: 0px;
     object-fit: cover; /* Ensures image fills the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
 /* Styling for the name */
 h1 {
     font-size: 32px;
     font-family: Arial;
-    color: #178ddb;
+    color: #46a9eb;
     margin-bottom: 20px;
     font-weight: bold;
+    
 }
 
-.paragraph-under-header {
+.paragraph-under-image {
+    color:#8d8888;
+    font-family:Arial;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+h2 {
+    margin-bottom: 0px;
+    color: #46a9eb;
+    font-family:Arial;
+}
+
+.paragraph-under-h2 {
     color:#8d8888;
     font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 12px;
+    margin-top: 0px;
+    font-family:Arial;
 }
 
 /* Container for buttons */
@@ -113,4 +131,73 @@ h1 {
     transform: translateY(-2px); /* Slight move up effect */
 }
 
+
+/****** download button conatiner *******/
+/* General button styling */
+.download-button-container {
+    display: flex;
+    margin-top: 20px; /* Space above the button container */
+}
+
+.download-button {
+    flex: 1; /* Make buttons take equal space */
+    padding: 10px 20px;
+    background-color: #888888; /* Grey background */
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    text-align: center;
+    border: 1px solid #888888; /* Border same as background */
+    border-radius: 5px 0 0 5px; /* Rounded left side for the first button */
+}
+
+.download-button:first-of-type {
+    border-radius: 5px 0 0 5px; /* Rounded left side for the first button */
+}
+
+.download-button:last-of-type {
+    border-radius: 0 5px 5px 0; /* Rounded right side for the second button */
+}
+
+.download-button:not(:last-of-type) {
+    border-right: none; /* Remove border between buttons */
+}
+
+.download-button:hover {
+    background-color: #555555; /* Darker grey on hover */
+    border-color: #555555; /* Darker border on hover */
+}
+/****** ------download button conatiner------- *******/
+
+/*********** Footer ************/
+/* Footer Styling */
+.footer {
+    width: 100%; /* Full width */
+    background-color: #333333; /* Grey background */
+    padding: 10px 0; /* Top and bottom padding */
+    position: fixed; /* Fixed to the bottom of the page */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    text-align: center; /* Center the content inside */
+    z-index: 10; /* Ensure it stays on top of other content */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+.footer-button {
+    background-color: #888888; /* Light grey background for buttons */
+    color: white;
+    border: none; /* Remove default button borders */
+    padding: 10px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer-button:hover {
+    background-color: #555555; /* Darker grey on hover */
+}
+/************* -------Footer------ **************/
 
