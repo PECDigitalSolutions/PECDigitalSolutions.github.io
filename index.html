@@ -34,12 +34,23 @@
         <!-- Footer Section -->
         <footer class="footer">
             <div class="footer-container">
+                <!-- Menu icon -->
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <!-- List of links (for large screens) -->
                 <button class="footer-button" onclick="window.location.href='index.html'">Home</button>
                 <button class="footer-button" onclick="window.location.href='#service'">Service</button>
                 <button class="footer-button" onclick="window.location.href='#about'">About</button>
                 <button class="footer-button" onclick="window.location.href='#contact'">Contact</button>
             </div>
-        </footer>
+            <!-- Footer menu (hidden on large screens, shown on small screens) -->
+            <div class="footer-menu">
+                <button class="footer-button-menu" onclick="window.location.href='index.html'">Home</button>
+                <button class="footer-button-menu" onclick="window.location.href='#service'">Service</button>
+                <button class="footer-button-menu" onclick="window.location.href='#about'">About</button>
+                <button class="footer-button-menu" onclick="window.location.href='#contact'">Contact</button>
+            </div>
+        </footer>        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

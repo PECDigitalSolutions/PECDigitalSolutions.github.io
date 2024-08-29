@@ -27,7 +27,7 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .main-container {
         width: 90%; /* Slightly wider on smaller screens */
         padding: 15px; /* Reduce padding for small screens */
@@ -171,33 +171,108 @@ h2 {
 /*********** Footer ************/
 /* Footer Styling */
 .footer {
-    width: 100%; /* Full width */
-    background-color: #333333; /* Grey background */
-    padding: 10px 0; /* Top and bottom padding */
-    position: fixed; /* Fixed to the bottom of the page */
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Align to the left */
-    text-align: center; /* Center the content inside */
-    z-index: 10; /* Ensure it stays on top of other content */
+    width: 100%;
+    background-color: #333333;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
 }
 
+/* Container for footer buttons and menu icon */
 .footer-container {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 11; /* Ensure it appears above other content */
 }
 
+/* Styling for footer buttons */
 .footer-button {
-    background-color: #888888; /* Light grey background for buttons */
+    background: none;
     color: white;
-    border: none; /* Remove default button borders */
-    padding: 10px 20px; /* Padding for buttons */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
 }
 
-.footer-button:hover {
-    background-color: #555555; /* Darker grey on hover */
+/* Hide the footer buttons by default on smaller screens */
+.footer-button {
+    display: block;
 }
+
+/* Menu icon styling */
+.menu-icon {
+    display: none; /* Hide menu icon by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu styling */
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 40px; /* Adjust based on footer height */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 10px 0;
+    overflow: hidden; /* Hide content overflow */
+    max-height: 0; /* Start with height 0 for animation */
+    opacity: 0; /* Start with opacity 0 */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    z-index: 20; /* Ensure it appears above other content */
+}
+
+/* Styling for menu buttons */
+.footer-button-menu {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Show menu when toggled */
+.footer-menu.show {
+    max-height: 200px; /* Adjust based on the height of your menu */
+    opacity: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer-button {
+        display: none; /* Hide footer buttons on small screens under 800px */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+}
+/* Ensure footer-menu is not visible on large screens */
+@media (min-width: 801px) {
+    .footer-menu {
+        display: none; /* Hide menu by default on larger screens */
+    }
+}
+
 /************* -------Footer------ **************/
 
