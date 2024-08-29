@@ -1,9 +1,8 @@
 /* Basic styling for the entire page */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Soft background color */
+    background-color: #ffffff; /* Soft background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,23 +10,32 @@ body {
     text-align: center; /* Ensure text is centered */
 }
 
+
 /* Main container to hold both left and right sections */
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top of the container */
     width: 80%; /* Adjusted width for responsiveness */
-    max-width: 800px; /* Max width for larger screens */
+    max-width: 1000px; /* Max width for larger screens */
+    height: calc(100vh - 80px); /* Height to fill the viewport minus 80px */
     background-color: #ffffff; /* White background for content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     border-radius: 10px;
     padding: 20px;
-
-    /* Colored border for visualization */
-    border: 3px solid green; /* Green border for the main container */
+    margin: 10px auto; /* 10px top and bottom, auto for left and right centering */
 }
 
-/* Left side styling */
+
+@media (max-width: 600px) {
+    .main-container {
+        width: 90%; /* Slightly wider on smaller screens */
+        padding: 15px; /* Reduce padding for small screens */
+    }
+}
+
+
+/* Left/right side styling */
 .left-side, .right-side {
     flex: 1; /* Take equal space */
     padding: 20px;
@@ -36,27 +44,50 @@ body {
 /* Left side specific styling */
 .left-side {
     border-right: 2px solid #ddd; /* Divider between columns */
-
-    /* Colored border for visualization */
     border: 3px solid blue; /* Blue border for the left side */
     margin-right: 10px; /* Space between left and right sides */
+    margin-top: 20px; /* Space from the top of the container */
+}
+
+/* Right side styling */
+.right-side {
+    border: 3px solid red; /* Red border for the right side */
+    margin-left: 10px; /* Space between left and right sides */
+    margin-top: 20px; /* Space from the top of the container */
+}
+
+.right-side h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Center text vertically in the right-side */
 }
 
 /* Styling for the profile image */
 .profile-image {
-    width: 150px; /* Size of the image */
-    height: 150px;
+    width: 200px; /* Size of the image */
+    height: 200px;
     border-radius: 50%; /* Circular image */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     object-fit: cover; /* Ensures image fills the circle */
 }
 
 /* Styling for the name */
 h1 {
     font-size: 32px;
-    color: #333;
+    font-family: Arial;
+    color: #178ddb;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.paragraph-under-header {
+    color:#8d8888;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 /* Container for buttons */
@@ -82,19 +113,4 @@ h1 {
     transform: translateY(-2px); /* Slight move up effect */
 }
 
-/* Right side styling */
-.right-side {
-    /* Colored border for visualization */
-    border: 3px solid red; /* Red border for the right side */
-    margin-left: 10px; /* Space between left and right sides */
-}
 
-.right-side h2 {
-    font-size: 28px;
-    color: #333;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Center text vertically in the right-side */
-}
