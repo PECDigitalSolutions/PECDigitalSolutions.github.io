@@ -44,7 +44,7 @@ body {
 /* Left side specific styling */
 .left-side {
     border-right: 2px solid #ddd; /* Divider between columns */
-    border: 3px solid blue; /* Blue border for the left side */
+   /* border: 3px solid blue; /* Blue border for the left side */
     margin-right: 10px; /* Space between left and right sides */
     margin-top: 20px; /* Space from the top of the container */
     text-align: left;
@@ -52,7 +52,7 @@ body {
 
 /* Right side styling */
 .right-side {
-    border: 3px solid red; /* Red border for the right side */
+   /* border: 3px solid red; /* Red border for the right side */
     margin-left: 10px; /* Space between left and right sides */
     margin-top: 20px; /* Space from the top of the container */
     text-align: left;
