@@ -267,10 +267,10 @@ h2 {
         display: block; /* Show menu icon on small screens */
     }
 }
-/* Ensure footer-menu is not visible on large screens */
+
 @media (min-width: 801px) {
     .footer-menu {
-        display: none; /* Hide menu by default on larger screens */
+        display: none; /* Hide menu when the screen gets larger */
     }
 }
 
