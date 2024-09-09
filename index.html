@@ -10,13 +10,25 @@
     <!-- Navigation Menu at the top -->
     <nav class="top-nav">
         <div class="nav-container">
+            <!-- Menu icon for small screens -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navigation buttons -->
+            <div class="nav-links">
+                <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
+                <button class="nav-button" onclick="window.location.href='#service'">Service</button>
+                <button class="nav-button" onclick="window.location.href='#about'">About</button>
+                <button class="nav-button" onclick="window.location.href='#contact'">Contact</button>
+            </div>
+        </div>
+        <!-- Responsive menu (hidden by default) -->
+        <div class="responsive-menu">
             <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
             <button class="nav-button" onclick="window.location.href='#service'">Service</button>
             <button class="nav-button" onclick="window.location.href='#about'">About</button>
             <button class="nav-button" onclick="window.location.href='#contact'">Contact</button>
         </div>
     </nav>
-
+    
     <div class="main-container">
         <!-- Left side: Name, Image, Buttons -->
         <div class="left-side">
@@ -40,7 +52,6 @@
         <div class="right-side">
             <h1>Systemutvecklare</h1>
         </div>
-      
     </div>
     <script src="script.js"></script>
 </body>

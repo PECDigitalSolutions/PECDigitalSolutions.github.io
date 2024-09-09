@@ -1,4 +1,5 @@
+// script.js
 
-function toggleMenu() {
-    document.querySelector('.footer-menu').classList.toggle('show');
-}
+document.querySelector('.menu-icon').addEventListener('click', function() {
+    document.querySelector('.responsive-menu').classList.toggle('show');
+});

@@ -25,7 +25,21 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation buttons */
+.nav-links {
+    display: flex;
     gap: 20px;
 }
 
@@ -44,7 +58,54 @@ body {
 .nav-button:hover {
     background-color: #444444;
 }
-/************* ------NAV-------- **************/
+
+/********** Responsive Menu **********/
+.responsive-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333333;
+    padding: 10px;
+    position: absolute;
+    top: 100%; /* Align directly below the nav */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Ensure it appears above other content */
+    max-height: 0; /* Initial state: height is zero */
+    overflow: hidden; /* Hide content that overflows */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition for height and opacity */
+    opacity: 0; /* Start fully transparent */
+}
+
+/* Show responsive menu when toggled */
+.responsive-menu.show {
+    max-height: 300px; /* Adjust based on the content height */
+    opacity: 1; /* Fully visible */
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        display: none; /* Hide nav links on small screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+}
+
+@media (min-width: 801px) {
+    .responsive-menu {
+        display: none; /* Hide responsive menu on larger screens */
+        max-height: 0; /* Ensure it’s not visible */
+        opacity: 0; /* Ensure it’s fully transparent */
+    }
+
+    .nav-links {
+        display: flex; /* Show regular nav links on larger screens */
+    }
+
+}
+/************* ------!!!!!!!!!NAV!!!!!!!!!-------- **************/
 
 
 /* Main container to hold both left and right sections */
@@ -54,7 +115,7 @@ body {
     align-items: flex-start; /* Align items to the top of the container */
     width: 80%; /* Adjusted width for responsiveness */
     max-width: 1000px; /* Max width for larger screens */
-    height: calc(100vh - 80px); /* Height to fill the viewport minus 80px */
+    height: calc(100vh - 60px); /* Height to fill the viewport minus 60px (height of the top nav) */
     background-color: #ffffff; /* White background for content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     border-radius: 10px;
