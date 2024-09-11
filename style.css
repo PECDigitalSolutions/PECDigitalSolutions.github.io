@@ -2,7 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Soft background color */
+    background-color: #ffffffb6; /* Soft background color */
+    color: #000000; /* Light text for readability */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,16 +11,24 @@ body {
     text-align: center; /* Ensure text is centered */
 }
 
-/********** NAV ***********/
 /* Top Navigation Bar */
+.Name {
+    color: #f0f0f0;
+    font-size: 20px;
+    margin-left: auto;
+    white-space: nowrap; /* Prevent name from wrapping */
+    text-align: left;
+    font-family: Arial;
+    padding-right: 50px;
+}
+
 .top-nav {
     width: 100%;
-    background-color: #333333;
+    background-color: #2b2b2b; /* Darker nav background */
     padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
-    text-align: center;
     z-index: 1000;
 }
 
@@ -28,24 +37,25 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .menu-icon {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 24px;
     color: white;
     cursor: pointer;
 }
 
-/* Navigation buttons */
 .nav-links {
     display: flex;
     gap: 20px;
 }
 
 .nav-button {
-    background: none;
-    color: white;
+    background-color: #444444; /* Dark button background */
+ /*   background: none;  */
+    color: #f0f0f0; /* Light text */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -56,10 +66,10 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #444444;
+    background-color: #555555; /* Slightly lighter on hover */
 }
 
-/********** Responsive Menu **********/
+/* Responsive Menu */
 .responsive-menu {
     display: flex;
     flex-direction: column;
@@ -70,142 +80,158 @@ body {
     top: 100%; /* Align directly below the nav */
     left: 0;
     right: 0;
-    z-index: 1001; /* Ensure it appears above other content */
-    max-height: 0; /* Initial state: height is zero */
-    overflow: hidden; /* Hide content that overflows */
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition for height and opacity */
-    opacity: 0; /* Start fully transparent */
+    z-index: 1001;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
 }
 
-/* Show responsive menu when toggled */
 .responsive-menu.show {
-    max-height: 300px; /* Adjust based on the content height */
-    opacity: 1; /* Fully visible */
+    max-height: 300px;
+    opacity: 1;
 }
 
 @media (max-width: 800px) {
     .nav-links {
-        display: none; /* Hide nav links on small screens */
+        display: none;
     }
 
     .menu-icon {
-        display: block; /* Show menu icon on small screens */
+        display: block;
     }
 }
 
 @media (min-width: 801px) {
     .responsive-menu {
-        display: none; /* Hide responsive menu on larger screens */
-        max-height: 0; /* Ensure it’s not visible */
-        opacity: 0; /* Ensure it’s fully transparent */
+        display: none;
+        max-height: 0;
+        opacity: 0;
     }
 
     .nav-links {
-        display: flex; /* Show regular nav links on larger screens */
+        display: flex;
     }
-
 }
-/************* ------!!!!!!!!!NAV!!!!!!!!!-------- **************/
 
-
-/* Main container to hold both left and right sections */
+/************************ Main container *********************************************/
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top of the container */
-    width: 80%; /* Adjusted width for responsiveness */
-    max-width: 1000px; /* Max width for larger screens */
-    height: calc(100vh - 60px); /* Height to fill the viewport minus 60px (height of the top nav) */
-    background-color: #ffffff; /* White background for content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    border-radius: 10px;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    height: calc(100vh - 60px);
+    background-color: #ffffff; /* Dark background for the main content */
+    color: #000000; /* Light text for readability */
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; */
     padding: 20px;
-    margin: 10px auto; /* 10px top and bottom, auto for left and right centering */
+    
+    margin: 10px auto;
 }
-
-
+/* changes container when screen gets to 800px */
 @media (max-width: 800px) {
     .main-container {
-        width: 90%; /* Slightly wider on smaller screens */
-        padding: 15px; /* Reduce padding for small screens */
+        width: 90%;
+        padding: 15px;
     }
 }
 
-
-/* Left/right side styling */
 .left-side, .right-side {
-    flex: 1; /* Take equal space */
+    flex: 1;
     padding: 20px;
+    margin-top: 20px;
 }
 
-/* Left side specific styling */
+/* Left side styling */
 .left-side {
-    border-right: 2px solid #ddd; /* Divider between columns */
-   /* border: 3px solid blue; /* Blue border for the left side */
-    margin-right: 10px; /* Space between left and right sides */
-    margin-top: 20px; /* Space from the top of the container */
+    /*border-right: 2px solid #ddd;*/
+    margin-right: 40px;
     text-align: left;
 }
 
 /* Right side styling */
 .right-side {
-   /* border: 3px solid red; /* Red border for the right side */
-    margin-left: 10px; /* Space between left and right sides */
-    margin-top: 20px; /* Space from the top of the container */
+    margin-left: 10px;
     text-align: left;
 }
 
 .right-side h1 {
-    font-size: 28px;
-    color: #000000;
+    color:#000000;
+    font-size: 40px;
     font-weight: bold;
-    font-style: Arial;
     display: flex;
-    height: 100%; /* Center text vertically in the right-side */
+    height: 100%;
 }
 
-/* Styling for the profile image */
-.profile-image {
-    width: 200px; /* Size of the image */
-    height: 200px;
-    border-radius: 50%; /* Circular image */
-    margin-bottom: 0px;
-    object-fit: cover; /* Ensures image fills the circle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-}
-
-/* Styling for the name */
-h1 {
-    font-size: 32px;
-    font-family: Arial;
-    color: #46a9eb;
-    margin-bottom: 20px;
+.right-side h2 {
+    color:#000000;
+    font-size: 30px;
     font-weight: bold;
+    display: flex;
+    height: 100%;
+}
+
+.right-side h3 {
+    color:#000000;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.right-side p {
+    color:#4d4040;
+    font-size: 20px;
+}
+
+.right-side li {
+    color:#4d4040;
+    font-size: 20px;
+    
     
 }
 
+/* Profile image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
 .paragraph-under-image {
-    color:#8d8888;
-    font-family:Arial;
+    color: #8d8888;
+    font-family: Arial;
     font-size: 20px;
-    margin-top: 0px;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: Arial;
+    color: #0099ff;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     color: #46a9eb;
-    font-family:Arial;
+    font-family: Arial;
 }
 
 .paragraph-under-h2 {
-    color:#8d8888;
-    font-family:'Times New Roman', Times, serif;
+    color: #8d8888;
     font-size: 12px;
-    margin-top: 0px;
-    font-family:Arial;
+    margin-top: 0;
+    font-family: Arial;
 }
 
-/* Container for buttons */
+/* Button container */
 .button-container {
     margin-top: 20px;
 }
@@ -214,53 +240,41 @@ h2 {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    border: 2px solid #007BFF; /* Border color */
-    background-color: #007BFF; /* Button background color */
+    border: 2px solid #007BFF;
+    background-color: #007BFF;
     color: white;
     border-radius: 5px;
-    margin: 5px; /* Space between buttons */
+    margin: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover effect for buttons */
 .button-container button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Slight move up effect */
+    transform: translateY(-2px);
 }
 
-
-/****** download button conatiner *******/
-/* General button styling */
+/* Download button container */
 .download-button-container {
     display: flex;
-    margin-top: 20px; /* Space above the button container */
+    margin-top: 20px;
 }
 
 .download-button {
-    flex: 1; /* Make buttons take equal space */
+    flex: 1;
     padding: 10px 20px;
-    background-color: #888888; /* Grey background */
+    background-color: #888888;
     color: white;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
     text-align: center;
-    border: 1px solid #888888; /* Border same as background */
-    border-radius: 5px 0 0 5px; /* Rounded left side for the first button */
-}
-
-.download-button:first-of-type {
-    border-radius: 5px 0 0 5px; /* Rounded left side for the first button */
+    border: 1px solid #888888;
+    border-radius: 5px 0 0 5px;
 }
 
 .download-button:last-of-type {
-    border-radius: 0 5px 5px 0; /* Rounded right side for the second button */
-}
-
-.download-button:not(:last-of-type) {
-    border-right: none; /* Remove border between buttons */
+    border-radius: 0 5px 5px 0;
 }
 
 .download-button:hover {
-    background-color: #555555; /* Darker grey on hover */
-    border-color: #555555; /* Darker border on hover */
+    background-color: #555555;
+    border-color: #555555;
 }
-/****** ------download button conatiner------- *******/
