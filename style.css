@@ -287,7 +287,7 @@ h2 {
 
 
 /* Displays the menu icon when screen is under 800 px which can show the menu */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .Name {
         display: none;
@@ -299,8 +299,6 @@ h2 {
         font-size: 20px; /* Adjust font size if needed */
         color: #f0f0f0; /* Adjust color if needed */
         font-family: Arial;
-        margin: 0px;
-        padding: 0px;
         white-space: nowrap; /* Prevent name from wrapping */
     }
 
@@ -333,7 +331,7 @@ h2 {
 }
 
 /* Closes the menu when the screen gets larger than 800 px */
-@media (min-width: 801px) {
+@media (min-width: 901px) {
     .responsive-menu {
         display: none;
         max-height: 0;
