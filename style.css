@@ -131,10 +131,24 @@ body {
     margin: 10px auto;
 }
 /* changes container when screen gets to 800px */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .main-container {
         width: 90%;
         padding: 15px;
+        margin: 5% auto; /* Adjusted for smaller screens */
+    }
+
+    .left-side, .right-side {
+        padding: 10px; /* Reduced padding for smaller screens */
+        margin-top: 10px; /* Reduced margin-top for smaller screens */
+    }
+
+    .left-side {
+        margin-right: 20px; /* Reduced margin-right for smaller screens */
+    }
+
+    .right-side {
+        margin-left: 20px; /* Reduced margin-left for smaller screens */
     }
 }
 
