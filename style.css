@@ -308,24 +308,22 @@ h2 {
     }
 }
 
-/* changes container when screen gets to 1000px */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .main-container {
-        width: 90%;
-        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr; /* Makes the container a single column grid */
+        gap: 10px; /* Adds space between the left-side and right-side */
+        max-width: 1000px;
+        height: calc(100vh - 60px);
+        background-color: #ffffff; /* Dark background for the main content */
+        color: #000000; /* Light text for readability */
+        padding: 20px;
+        width: 100%;
         margin: 5% auto; /* Adjusted for smaller screens */
     }
 
     .left-side, .right-side {
         padding: 10px; /* Reduced padding for smaller screens */
-        margin-top: 10px; /* Reduced margin-top for smaller screens */
     }
 
-    .left-side {
-        margin-right: 20px; /* Reduced margin-right for smaller screens */
-    }
-
-    .right-side {
-        margin-left: 20px; /* Reduced margin-left for smaller screens */
-    }
 }
