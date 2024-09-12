@@ -1,10 +1,24 @@
-/* Basic styling for the entire page */
+/************** color variables for entire page ************/
+:root {
+    --background-light: #ffffff;
+    --background-dark: #2b2b2b;
+    --text-light: #f0f0f0;
+    --text-dark: #000000;
+    --text-dark-gray: #4d4040;
+    --button-background: #007BFF;
+    --button-background-hover: #0056b3;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+    --link-color: #0099ff;
+    --link-hover-color: #0056b3;
+}
+/***********************************************************/
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffffb6; /* Soft background color */
-    color: #000000; /* Light text for readability */
+    background-color: var(--background-light);
+    color: var(--text-dark);
     display: flex;
     flex-direction: column; /* Change direction to column for stacking elements */
     align-items: center; /* Center everything horizontally */
@@ -15,12 +29,12 @@ body {
 .top-nav {
     width: 80%; /* Set a width to make it smaller than the full width */
     max-width: 1000px; /* limit the max width */
-    background-color: #2b2b2b;
+    background-color: var(--background-dark);
     padding: 10px 20px;
     position: relative;
     margin: 20px auto; /* Center the nav bar and add space from the top */
     border-radius: 15px; /* Create rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* add shadow for visual effect */
+    box-shadow: 0 4px 8px var(--shadow-light);
     display: flex; 
     justify-content: space-between; /* Spread the content */
     align-items: center; /* Align items vertically */
@@ -37,7 +51,7 @@ body {
 
 /* Name styling */
 .Name {
-    color: #f0f0f0;
+    color: var(--text-light);
     font-size: 20px;
     white-space: nowrap; /* Prevent name from wrapping */
     font-family: Arial;
@@ -51,7 +65,7 @@ body {
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: white;
+    color: var(--text-light);
     cursor: pointer;
 }
 
@@ -64,8 +78,8 @@ body {
 
 /* Nav buttons */
 .nav-button {
-    background-color: #444444; /* Dark button background */
-    color: #f0f0f0; /* Light text */
+    background-color: var(--background-dark);
+    color: var(--text-light);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -86,7 +100,7 @@ body {
     max-height: 0; /* No height by default */
     overflow: hidden; /* Hide content overflow */
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out; /* Smooth transition */
-    background-color: #333333;
+    background-color: var(--background-dark);
     padding: 10px;
     position: absolute;
     top: 100%;
@@ -108,8 +122,8 @@ body {
 
 /* Style for individual nav buttons inside the menu */
 .responsive-menu .nav-button {
-    background-color: #444444; /* Dark button background */
-    color: #f0f0f0; /* Light text */
+    background-color: var(--background-dark);
+    color: var(--text-light);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -134,8 +148,8 @@ body {
     width: 80%;
     max-width: 1000px;
     height: calc(100vh - 60px);
-    background-color: #ffffff; /* Dark background for the main content */
-    color: #000000; /* Light text for readability */
+    background-color: var(--background-light);
+    color: var(--text-dark);
    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; */
     padding: 20px;
@@ -155,7 +169,7 @@ body {
     text-align: left;
     background-color: #f9f9f9; /* Light background color */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px var(--shadow-light);
 }
 
 /* Left side styling */
@@ -166,7 +180,7 @@ body {
 }
 
 .right-side h1 {
-    color:#000000;
+    color: var(--text-dark);
     font-size: 40px;
     font-weight: bold;
     display: flex;
@@ -174,7 +188,7 @@ body {
 }
 
 .right-side h2 {
-    color:#000000;
+    color: var(--text-dark);
     font-size: 30px;
     font-weight: bold;
     display: flex;
@@ -182,7 +196,7 @@ body {
 }
 
 .right-side h3 {
-    color:#000000;
+    color: var(--text-dark);
     font-size: 25px;
     font-weight: bold;
     display: flex;
@@ -209,7 +223,7 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px var(--shadow-dark);
 }
 
 .paragraph-under-image {
@@ -221,14 +235,14 @@ body {
 h1 {
     font-size: 32px;
     font-family: Arial;
-    color: #0099ff;
+    color: var(--link-color);
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 h2 {
     margin-bottom: 0;
-    color: #46a9eb;
+    color: var(--link-hover-color);
     font-family: Arial;
 }
 
@@ -248,8 +262,8 @@ h2 {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    border: 2px solid #007BFF;
-    background-color: #007BFF;
+    border: 2px solid var(--button-background);
+    background-color: var(--button-background);
     color: white;
     border-radius: 5px;
     margin: 5px;
@@ -257,7 +271,7 @@ h2 {
 }
 
 .button-container button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-background-hover);
     transform: translateY(-2px);
 }
 
@@ -294,9 +308,9 @@ h2 {
     padding: 20px; /* Adjust as needed */
     max-width: 800px; /* Limit the width */
     margin: 0 auto; /* Center the container */
-    background-color: #f9f9f9; /* Light background color */
+    background-color: var(--background-light);
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px var(--shadow-light);
 }
 
 .about-container h1 {
@@ -305,9 +319,8 @@ h2 {
 }
 
 .about-container p {
-    font-size: 1em; /* Adjust font size as needed */
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 20px; /* Space below the paragraph */
+    color: var(--text-dark);
+    font-size: 20px;
 }
 
 /*****************************************************/
@@ -325,7 +338,7 @@ h2 {
         content: "New Content Here"; /* Replace with the new content */
         display: block; /* Ensure the new content is displayed */
         font-size: 20px; /* Adjust font size if needed */
-        color: #f0f0f0; /* Adjust color if needed */
+        color: var(--text-light);
         font-family: Arial;
         white-space: nowrap; /* Prevent name from wrapping */
     }
