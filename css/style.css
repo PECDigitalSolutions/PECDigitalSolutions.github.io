@@ -188,61 +188,6 @@ h2 {
     font-family: var(--font-primary);
 }
 
-.paragraph-under-h2 {
-    color: #8d8888;
-    font-size: var(--font-size-small);
-    margin-top: 0;
-    font-family: var(--font-primary);
-}
-
-/* Button container */
-.button-container {
-    margin-top: 20px;
-}
-
-.button-container button {
-    font-size: var(--font-size-small);
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 2px solid var(--button-background);
-    background-color: var(--button-background);
-    color: white;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button-container button:hover {
-    background-color: var(--button-background-hover);
-    transform: translateY(-2px);
-}
-
-/* Download button container */
-.download-button-container {
-    max-width: 380px;
-    display: flex;
-    margin-top: 20px;
-}
-
-.download-button {
-    flex: 1;
-    padding: 10px 20px;
-    background-color: #888888;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid #888888;
-    border-radius: 5px 0 0 5px;
-}
-
-.download-button:last-of-type {
-    border-radius: 0 5px 5px 0;
-}
-
-.download-button:hover {
-    background-color: #555555;
-    border-color: #555555;
-}
 
 
 /* Displays the menu icon when screen is under 800 px which can show the menu */
