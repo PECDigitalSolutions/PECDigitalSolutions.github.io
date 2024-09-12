@@ -153,13 +153,19 @@ body {
 .right-side {
     margin-left: 10px;
     text-align: left;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Left side styling */
 .left-side {
     /*border-right: 2px solid #ddd;*/
-    margin-right: 40px;
+    margin-right: 10px;
     text-align: left;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .right-side h1 {
@@ -284,7 +290,32 @@ h2 {
     background-color: #555555;
     border-color: #555555;
 }
+/*****************************************************/
+/************************CONTACT**********************/
+/*****************************************************/
+.about-container {
+    padding: 20px; /* Adjust as needed */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
+.about-container h1 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.about-container p {
+    font-size: 1em; /* Adjust font size as needed */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/*****************************************************/
+/*****************************************************/
+/*****************************************************/
 
 /* Displays the menu icon when screen is under 800 px which can show the menu */
 @media (max-width: 900px) {
