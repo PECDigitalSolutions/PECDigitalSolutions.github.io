@@ -1,0 +1,24 @@
+
+/************************ABOUT ME**********************/
+
+.about-container {
+    padding: 20px; /* Adjust as needed */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+    background-color: var(--background-light);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.about-container h1 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.about-container p {
+    color: var(--text-dark);
+    font-size: var(--font-size-medium);
+}
+
+
+
