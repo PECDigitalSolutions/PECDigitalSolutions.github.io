@@ -1,3 +1,6 @@
+# Visit home page at
+https://pecdigitalsolutions.github.io/index
+
 # PECDigitalSolutions
 
 Welcome to PECDigitalSolutions!

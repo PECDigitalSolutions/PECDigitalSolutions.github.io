@@ -188,8 +188,6 @@ h2 {
     font-family: var(--font-primary);
 }
 
-
-
 /* Displays the menu icon when screen is under 800 px which can show the menu */
 @media (max-width: 900px) {
 
